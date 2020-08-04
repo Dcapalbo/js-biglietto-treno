@@ -1,16 +1,16 @@
-//km da percorrere
+//km to do
 var km = prompt("Inserire km da percorrere");
-//età del passeggero
+//age of the passenger
 var age = prompt("Inserire l'età");
-//prezzo base del biglietto
+//base ticket cost
 var priceKm = 0.21;
 
-//condizione per sconto del biglietto
+//condition for the ticket discount
 if (age < 18) {
   priceKm = priceKm * 0.8;
 } else if (age >= 65) {
   priceKm = priceKm * 0.6;
 }
 var totalPrice = priceKm * km;
-// stampare nel flusso HTML
+// printing on the HTML file
 document.getElementById("ticket-price").innerHTML = totalPrice;
