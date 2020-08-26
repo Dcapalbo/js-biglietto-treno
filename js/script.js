@@ -5,14 +5,13 @@
 // - >65 40% di sconto
 // - all 0% di sconto
 
-var name = prompt("Inserire nome"); // getting name
-var surname = prompt("Inserire cognome"); // getting surname
+var nome = prompt("Inserire nome"); // getting name
+var cognome = prompt("Inserire cognome"); // getting surname
 var km = prompt("Inserire km da percorrere"); // getting km
-var age = prompt("Inserire l'età"); // getting age
-var discount; // declare discount
+var età = prompt("Inserire l'età"); // getting age
+var sconto; // declare discount
 var d = new Date(); // getting date from user's pc
-var tomorrow = d.getDate() + 1; // calculate tomorrow
-// console.log(km + " " + age);
+
 
 var priceKm = 0.21; // base price
 
@@ -21,21 +20,21 @@ var priceKm = 0.21; // base price
 if (isNaN(km)) {
   alert("Errore, i dati inseriti non sono validi");
   km = prompt("Inserire km da percorrere");
-} else if (isNaN(age)) {
+} else if (isNaN(età)) {
   alert("Errore, i dati inseriti non sono validi");
-  age = prompt("Inserire l'età");
+  età = prompt("Inserire l'età");
 }
 // console.log(km + " " + age);
 
 
-if (age < 18) { // get 20% discount
+if (età < 18) { // 20% sconto
   priceKm = priceKm * 0.8;
-  discount = "20";
-  document.getElementById("discount").innerHTML = "* sconto già applicato del " + discount + "%";
-} else if (age >= 65) { // get 40% discount
+  sconto = "20";
+  document.getElementById("sconto").innerHTML = "* sconto già applicato del " + sconto + "%";
+} else if (età >= 65) { // 40% sconto
   priceKm = priceKm * 0.6;
-  discount = "40"
-  document.getElementById("discount").innerHTML = "* sconto già applicato del " + discount + "%";
+  sconto = "40"
+  document.getElementById("sconto").innerHTML = "* sconto già applicato del " + sconto + "%";
 }
 
 var totalPrice = priceKm * km; // getting the price
@@ -43,8 +42,8 @@ totalPrice = totalPrice.toFixed(2);
 
 // printing results in HTML
 document.getElementById("total-price").innerHTML = totalPrice + "€";
-document.getElementById("name").innerHTML = name;
-document.getElementById("surname").innerHTML = surname;
+document.getElementById("nome").innerHTML = nome;
+document.getElementById("cognome").innerHTML = cognome;
 document.getElementById("km").innerHTML = km + "km";
-document.getElementById("clock").innerHTML = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
-document.getElementById("date").innerHTML = tomorrow + "-" + d.getMonth() + "-" + d.getFullYear();
+document.getElementById("orologio").innerHTML = d.getDate() + "-" + d.getMonth() + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
+document.getElementById("data").innerHTML = tomorrow + "-" + d.getMonth() + "-" + d.getFullYear();

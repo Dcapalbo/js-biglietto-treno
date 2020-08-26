@@ -58,11 +58,11 @@ a {
   border-radius: 3px;
 }
 
-#name {
+#nome {
   text-decoration: underline;
   text-transform: capitalize;
 }
-#surname {
+#cognome {
   text-transform: capitalize;
 }
 #sconto {
@@ -72,7 +72,7 @@ a {
   right: 0;
 
 }
-#clock {
+#orologio {
   color: green;
   text-decoration: underline;
 }
